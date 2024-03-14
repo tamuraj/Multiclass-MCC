@@ -347,4 +347,3 @@ for(j in 1:length(n)){
 end_time <- Sys.time()
 time<-end_time-start_time
 res<-cbind(res,time)
-write.csv(res,file = "G:/study/MCC/R code/simulation_covarege_MCC/s3_macro.csv")
