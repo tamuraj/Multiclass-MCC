@@ -270,21 +270,3 @@ for(j in 1:length(n)){
 end_time <- Sys.time()
 time<-end_time-start_time
 res<-cbind(res,time)
-write.csv(res,file = "G:/study/MCC/R code/simulation_covarege_MCC/s6_micro.csv")
-hist(va[1:100000],breaks=seq(0,0.03,by=0.0001))
-hist(va[100001:200000],breaks=seq(0,0.008,by=0.0001))
-hist(va[200001:300000],breaks=seq(0,0.003,by=0.00001))
-hist(va[300001:400000],breaks=seq(0,0.0012,by=0.00001))
-hist(va[400001:500000],breaks=seq(0,0.0005,by=0.000001))
-
-hist(MCC1, breaks=30, xlim=c(-1,1), col=rgb(0,0,0,1), xlab="", 
-     ylab="", main="" )
-
-# Second with add=T to plot on top
-hist(low1, breaks=30, xlim=c(-1,1), col=rgb(0,0,1,0.5), add=T)
-
-hist(high1, breaks=30, xlim=c(-1,1), col=rgb(0,1,0,0.5), add=T)
-abline(v=t1mcc, col="red")
-
-legend("topright", legend=c("MCC","lowci","highci"), col=c(rgb(0,0,0,1), 
-                                                           rgb(0,0,1,0.5),rgb(0,1,0,0.5)), pt.cex=2, pch=15 )
