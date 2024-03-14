@@ -459,10 +459,3 @@ for(j in 1:length(n)){
 end_time <- Sys.time()
 time<-end_time-start_time
 res<-cbind(res,time)
-write.csv(res,file = "G:/study/MCC/R code/simulation_covarege_MCC/s6_micro2.csv")
-
-hist(va[1:100000],breaks=seq(0,0.03,by=0.0001))
-hist(va[100001:200000],breaks=seq(0,0.008,by=0.0001))
-hist(va[200001:300000],breaks=seq(0,0.003,by=0.00001))
-hist(va[300001:400000],breaks=seq(0,0.0012,by=0.00001))
-hist(va[400001:500000],breaks=seq(0,0.0005,by=0.000001))
