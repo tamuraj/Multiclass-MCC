@@ -169,4 +169,3 @@ for(j in 1:length(n)){
 end_time <- Sys.time()
 time<-end_time-start_time
 res<-cbind(res,time)
-#write.csv(res,file = "D:/study/MCC/R code/excel/s1_micro.csv")
