@@ -1,3 +1,3 @@
 Multiclass MCC Estimation and Evaluation
 
-This repository contains all the R code needed to reproduce the simulation runs for the calculation of confidence intervals for multiclass MCCs
+This repository contains functions to compute point estimates and confidence intervals for multiclass MCCs and R code for the computation of confidence interval coverage probabilities.
