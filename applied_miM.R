@@ -60,7 +60,7 @@ compute_microMcc_CI <- function(prob_matrix, n, conf.level) {
   ma <- rbind(d1)
   
   
-  s1 <- ma %*% (dp - p %*% t(p)) %*% t(ma)
+  s1 <- (r/(r-1))^2*sum(diag(prob_matrix))*(1-sum(diag(prob_matrix)))
   
   
   z <- qnorm(1 - (1 - conf.level) / 2)
