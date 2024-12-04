@@ -143,7 +143,7 @@ compute_macroMcc_CI <- function(prob_matrix, n, conf.level) {
   ma <- rbind(d1)
   
   
-  s1 <- ma %*% (dp - p %*% t(p)) %*% t(ma)
+  s1 <- sum(pa * (d1^2)) - (sum(pa * d1))^2
   
   # Calculate confidence interval
   z <- qnorm(1 - (1 - conf.level) / 2)
