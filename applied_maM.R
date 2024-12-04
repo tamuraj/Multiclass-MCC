@@ -159,7 +159,7 @@ compute_macroMcc_CI <- function(prob_matrix, n, conf.level) {
 # Example 
 prob_matrix <- matrix(c(
   0.1, 0.05, 0.05,
-  0.1, 0.2, 0.1,
+  0.1, 0.3, 0.1,
   0.05, 0.1, 0.15
 ), nrow = 3, byrow = TRUE)
-compute_macroMcc_CI(prob_matrix/sum(prob_matrix),1000,0.95)
+compute_macroMcc_CI(prob_matrix,1000,0.95)
