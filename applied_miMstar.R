@@ -140,7 +140,7 @@ compute_extendedMicroMcc_CI <- function(prob_matrix, n, conf.level) {
   ma <- rbind(d1)
   
   
-  s1 <- ma %*% (dp - p %*% t(p)) %*% t(ma)
+  s1<-sum(pa * (d1^2)) - (sum(pa * d1))^2
   
   # Calculate confidence interval
   z <- qnorm(1 - (1 - conf.level) / 2)
@@ -157,7 +157,7 @@ compute_extendedMicroMcc_CI <- function(prob_matrix, n, conf.level) {
 # Example 
 prob_matrix <- matrix(c(
   0.1, 0.05, 0.05,
-  0.1, 0.2, 0.1,
+  0.1, 0.3, 0.1,
   0.05, 0.1, 0.15
 ), nrow = 3, byrow = TRUE)
 
